@@ -264,8 +264,7 @@ def start(update: Update, context: CallbackContext):
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
-
-             
+            )
 
 
 def error_handler(update, context):
