@@ -84,10 +84,9 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-HELP_IMG = "https://telegra.ph//file/b3aedf8d65276f8241556.jpg"
+
 HELP_MSG = "Click the button below to get help menu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
-START_IMG = "https://telegra.ph/file/5ed8d6ab91ea9b9eaaad0.jpg"
 YORFORGER_IMG = "https://telegra.ph/file/b481007f9b5482cd3815f.jpg"
 
 PM_START_TEXT = """
@@ -97,7 +96,7 @@ Heyyo `{}`,  here to help,
 ┏━━━━━━━━━━━━━━━━━━━━
 ┣♡ *Uptime:* `{}`
 ┗━━━━━━━━━━━━━━━━━━━━
-*Try The Help Buttons Below To Know My Abilities And Charm* ××
+*Try The Help Buttons Below To Know My Abilities* ××
 """
 
 GROUP_START_TEXT = """
@@ -119,7 +118,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🔐 Help", callback_data="help_back"
+            text="🔐 Help & Commands", callback_data="help_back"
         ),
     ],
     [
@@ -424,13 +423,13 @@ def get_help(update, context):
     # ONLY send help in PM
     if chat.type != chat.PRIVATE:
 
-        update.effective_message.reply_photo(          
-            START_IMG, HELP_MSG,
+        update.effective_message.reply_text(          
+            HELP_MSG,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Open In Private Chat",
+                            text="Help",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
