@@ -650,20 +650,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_text(
-                "@Mitsurihelpsupport",
-                "I Am Up And Ready!",
-                parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                  [                  
-                       InlineKeyboardButton(
-                             text="[Start Me]",
-                             url="https://t.me/@TanjiroXKanaobot?start=")
-                     ] 
-                ]
-            ),  
-        )
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online Mina!")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
