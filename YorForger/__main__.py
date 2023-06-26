@@ -88,15 +88,14 @@ HELP_IMG = "https://telegra.ph//file/b3aedf8d65276f8241556.jpg"
 HELP_MSG = "Click the button below to get help menu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 START_IMG = "https://telegra.ph/file/5ed8d6ab91ea9b9eaaad0.jpg"
-    
+YORFORGER_IMG = "https://telegra.ph/file/b481007f9b5482cd3815f.jpg"
+
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/a15eb346fec9a0b1b2696.mp4) 」────
+────「 [{}]」────
 Heyyo `{}`,  here to help,
 *I am an Anime themed advance group management bot with a lot of awesome Features*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┣♡ *Uptime:* `{}`
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-┣♡ `{}` *users, across* `{}` *chats.*
 ┗━━━━━━━━━━━━━━━━━━━━
 *Try The Help Buttons Below To Know My Abilities And Charm* ××
 """
@@ -109,13 +108,13 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text="💖 ADD ME IN YOUR GROUP",url="http://t.me/Yor_forger_spyxfamily_bot?startgroup=true"),
+            text="⚔️ ADD ME IN YOUR GROUP ⚔️",url="http://t.me/TanjiroXKanaobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="⚙️ Support", url=f"https://t.me/Komisansupport"),                    
+            text="⚙️ Support", url=f"https://t.me/MitsuriHelpSupport"),                    
         InlineKeyboardButton(
-            text="Updates",  url=f"https://t.me/yorforgerbotupdates"
+            text="Updates",  url=f"https://t.me/TeamxXYZ"
         ),
     ],
     [
@@ -125,7 +124,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="Wallpaper Channel", url=f"https://t.me/animengameswall"),                    
+            text="Anime Channel", url=f"https://t.me/estanimes"),                    
     ],
     
 ]
