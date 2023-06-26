@@ -18,7 +18,7 @@ async def awake(event):
   TEXT += f"**» ᴍʏ ᴏᴡɴᴇʀ : [Kirito 『 𓃠 』](https://t.me/Kirito_est)** \n\n"
   TEXT += f"**» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
   TEXT += f"**» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
-  TEXT += f**» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
+  TEXT += f"**»ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
   TEXT += f"**➖➖➖➖➖➖➖➖➖**"
   BUTTON = [[Button.url("Update", "https://t.me/TeamxXYZ"), Button.url("Support", "https://t.me/MitsuriHelpSupport")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
