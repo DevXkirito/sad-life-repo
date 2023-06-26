@@ -1,30 +1,24 @@
-from YorForger import dispatcher
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
-from telegram.utils.helpers import escape_markdown
-
-from telegram.ext import (
-    CallbackContext,
-    CommandHandler,
-)
-
-PHOTO = "https://te.legra.ph/file/d278826d0f59ed9c00341.mp4"
-
-
-def alive(update: Update, context: CallbackContext):
-    TEXT = "Hi **{}**[,](https://te.legra.ph/file/d278826d0f59ed9c00341.mp4) I Am **Yor Forger**!\n\n◈I'm working properly! \n\n◈My Darling - **[AUGSTUN 🝪 𝕮UᏒᏕɆĐ](https://t.me/Aug0felix)**\n\n◈Thanks For Using Me Here◈"
-
-    first_name = update.effective_user.first_name
-
-    update.effective_message.reply_text(
-        TEXT.format(escape_markdown(first_name)), 
-        parse_mode=ParseMode.MARKDOWN,
-    )
-
-void_handler = CommandHandler("alive", alive, run_async = True)
-dispatcher.add_handler(void_handler)
+import os
+import re
+from platform import python_version as kontol
+from telethon import events, Button
+from telegram import __version__ as telever
+from telethon import __version__ as tlhver
+from pyrogram import __version__ as pyrover
+from YorForger.events import register
+from YorForger import telethn as tbot
 
 
-__help__ = """ 
-❂ /alive: To check if bot is alive or not."""
-   
-__mod_name__ = "Alive"
+PHOTO = "https://telegra.ph/file/ff2fa22dfa6ae838cc6cd.jpg"
+
+@register(pattern=("/alive"))
+async def awake(event):
+  TEXT = f"**ʜᴇʏ, ɪ ᴀᴍ ₮₳₦JłⱤØӾ₭₳₦₳Ø.** \n\n"
+  TEXT += f"**➖➖➖➖➖➖➖➖➖**"
+  TEXT += f"**» ᴍʏ ᴏᴡɴᴇʀ : [Kirito 『 𓃠 』](https://t.me/Kirito_est)** \n\n"
+  TEXT += f"**» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
+  TEXT += f"**» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
+  TEXT += f**» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
+  TEXT += f"**➖➖➖➖➖➖➖➖➖**"
+  BUTTON = [[Button.url("Update", "https://t.me/TeamxXYZ"), Button.url("Support", "https://t.me/MitsuriHelpSupport")]]
+  await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
