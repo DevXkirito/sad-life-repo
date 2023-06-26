@@ -1,4 +1,4 @@
-from yourbot import app,TOKEN
+from YorForger import app,TOKEN
 from pyrogram import filters
 import requests
 from urllib.parse import quote_plus
