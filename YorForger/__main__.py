@@ -246,7 +246,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                YORFORGER_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(context.bot.first_name),
                     escape_markdown(first_name),
@@ -258,29 +259,13 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-                update.effective_message.reply_photo(
-            START_IMG, caption="<b>Hello, I'm Yor Forger!\nI'm Working Properly.</b>\nI am alive since: <code>{}</code>".format(
+                update.effective_message.reply_text(
+             caption="<b>Hello, I'm ₮₳₦JłⱤØӾ₭₳₦₳Ø!\nI'm Working Properly.</b>\nI am alive since: <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
 
-             reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                  InlineKeyboardButton(text="Owner", url="https://t.me/Aug0felix")
-                  ],
-                  [
-                  InlineKeyboardButton(text="Manager", url="https://t.me/Sneha_UwU_OwO")
-                  ],
-                  [
-                  InlineKeyboardButton(text="❤Sᴜᴘᴘᴏʀᴛ❤", url="https://t.me/Komisansupport")
-                  ],
-                  [
-                  InlineKeyboardButton(text="🔰Uᴘᴅᴀᴛᴇs🔰", url="https://t.me/yorforgerbotupdates")
-                  ]
-                ]
-            ),
-        )
+             
 
 
 def error_handler(update, context):
@@ -666,9 +651,8 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_photo(
-                "@Komisansupport",
-                "https://telegra.ph/file/48a7b1f82d491d38b3ca9.jpg",
+            dispatcher.bot.send_text(
+                "@Mitsurihelpsupport",
                 "I Am Up And Ready!",
                 parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -676,7 +660,7 @@ def main():
                   [                  
                        InlineKeyboardButton(
                              text="[Start Me]",
-                             url="https://t.me/yor_forger_spyxfamily_bot?start=")
+                             url="https://t.me/@TanjiroXKanaobot?start=")
                      ] 
                 ]
             ),  
