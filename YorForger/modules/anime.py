@@ -12,6 +12,7 @@ from telegram import (
     Message,
 )
 
+from YorForger.modules.helper_funcs.alternate import typing_action
 from YorForger import dispatcher
 from YorForger.modules.disable import DisableAbleCommandHandler
 
@@ -173,26 +174,30 @@ def extract_arg(message: Message):
     return None
 
 
-def airing(update: Update, _):
+@typing_action
+def airing(update, context):
     message = update.effective_message
-    search_str = extract_arg(message)
-    if not search_str:
+    search_str = message.text.split(' ', 1)
+    if len(search_str) == 1:
         update.effective_message.reply_text(
-            "Tell Anime Name :) ( /airing <anime name>)",
-        )
+            '*Usage:* `/airing <anime name>`',
+            parse_mode = ParseMode.MARKDOWN)
         return
-    variables = {"search": search_str}
+    variables = {'search': search_str[1]}
     response = requests.post(
-        url,
-        json={"query": airing_query, "variables": variables},
-    ).json()["data"]["Media"]
-    msg = f"*Name*: *{response['title']['romaji']}*(`{response['title']['native']}`)\n*ID*: `{response['id']}`"
-    if response["nextAiringEpisode"]:
-        time = response["nextAiringEpisode"]["timeUntilAiring"] * 1000
+        url, json={
+            'query': airing_query,
+            'variables': variables
+        }).json()['data']['Media']
+    info = response.get('siteUrl')
+    image = info.replace('anilist.co/anime/', 'img.anili.st/media/')
+    msg = f"*Name*: *{response['title']['romaji']}*(`{response['title']['native']}`)\n*• ID*: `{response['id']}`[⁠ ⁠]({image})"
+    if response['nextAiringEpisode']:
+        time = response['nextAiringEpisode']['timeUntilAiring'] * 1000
         time = t(time)
-        msg += f"\n*Episode*: `{response['nextAiringEpisode']['episode']}`\n*Airing In*: `{time}`"
+        msg += f"\n*Episode*: `{response['nextAiringEpisode']['episode']}`\n*• Airing In*: `{time}`"
     else:
-        msg += f"\n*Episode*:{response['episodes']}\n*Status*: `N/A`"
+        msg += f"\n*Episode*:{response['episodes']}\n*• Status*: `N/A`"
     update.effective_message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
 
 
