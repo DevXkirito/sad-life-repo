@@ -90,7 +90,7 @@ START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 YORFORGER_IMG = "https://telegra.ph/file/b481007f9b5482cd3815f.jpg"
 
 PM_START_TEXT = """
-Kᴏɴɪᴄʜɪᴡᴀ `{}`, I'ᴍ Kurumi Tokisaki, A Aɴɪᴍᴇ Tʜᴇᴍᴇᴅ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ.
+Kᴏɴɪᴄʜɪᴡᴀ `{}`, I'ᴍ TanjiroXKanao, A Aɴɪᴍᴇ Tʜᴇᴍᴇᴅ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ♡ *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
