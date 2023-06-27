@@ -90,13 +90,11 @@ START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 YORFORGER_IMG = "https://telegra.ph/file/b481007f9b5482cd3815f.jpg"
 
 PM_START_TEXT = """
-────「 [{}]」────
-Heyyo `{}`,  here to help,
-*I am an Anime themed advance group management bot with a lot of awesome Features*
-┏━━━━━━━━━━━━━━━━━━━━
-┣♡ *Uptime:* `{}`
-┗━━━━━━━━━━━━━━━━━━━━
-*Try The Help Buttons Below To Know My Abilities* ××
+Kᴏɴɪᴄʜɪᴡᴀ `{}`, I'ᴍ Kurumi Tokisaki, A Aɴɪᴍᴇ Tʜᴇᴍᴇᴅ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ.
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+♡ *Uptime:* `{}`
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+Hɪᴛ Tʜᴇ /help Tᴏ Gᴇᴛ Lɪsᴛ Oғ Mʏ Cᴏᴍᴍᴀɴᴅs.××
 """
 
 GROUP_START_TEXT = """
@@ -118,12 +116,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🔐 Help & Commands", callback_data="help_back"
-        ),
-    ],
-    [
-        InlineKeyboardButton(
-            text="Anime Channel", url=f"https://t.me/estanimes"),                    
+            text="⛩️ Anime Channel", url=f"https://t.me/estanimes"),                    
     ],
     
 ]
