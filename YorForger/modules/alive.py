@@ -9,16 +9,16 @@ from pyrogram import __version__ as pyrover
 from YorForger.events import register
 from YorForger import pbot as app
 
-PHOTO = "https://telegra.ph/file/ff2fa22dfa6ae838cc6cd.jpg"
+PHOTO = "https://telegra.ph/file/cf0ba22dd45e1a8bbe187.jpg"
 
 @app.on_message(filters.command("alive"))
 async def awake(client, message):
     TEXT = f"**ʜᴇʏ, ɪ ᴀᴍ ₮₳₦JłⱤØӾ₭₳₦₳Ø.** \n\n"
-    TEXT += f"**➖➖➖➖➖➖➖➖➖**"
-    TEXT += f"**» ᴍʏ ᴏᴡɴᴇʀ : [Kirito 『 𓃠 』](https://t.me/Kirito_est)** \n\n"
+    TEXT += f"➖➖➖➖➖➖➖➖➖"
+    TEXT += f"**» ᴍʏ ᴏᴡɴᴇʀ : [Kirito『 𓃠 』](https://t.me/Kirito_est)** \n\n"
     TEXT += f"**» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
     TEXT += f"**» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
-    TEXT += f"**»ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
+    TEXT += f"**» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
     TEXT += f"**➖➖➖➖➖➖➖➖➖**"
 
     BUTTON = InlineKeyboardMarkup(
