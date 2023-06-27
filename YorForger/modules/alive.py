@@ -7,6 +7,7 @@ from telegram import __version__ as telever
 from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
 from YorForger.events import register
+from YorForger import pbot as app
 
 PHOTO = "https://telegra.ph/file/ff2fa22dfa6ae838cc6cd.jpg"
 
