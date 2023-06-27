@@ -10,7 +10,7 @@
     ──「 DEPLOY ON HEROKU 」──
 </h2>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/DevXkirito/yor-froger-bot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-green&red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/DevXkirito/yor-froger-bot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-dark-green&red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h2 align="center">
@@ -18,7 +18,7 @@
 </h2>
 
 <p align="center">
-<a href= "http://t.me/Yor_forger_spyxfamily_bot"> <img src="https://img.shields.io/badge/SOME1HING-User-green?style=for-the-badge&logo=telegram" alt=Yor_Forger on Telegram" /> </a>
+<a href= "http://t.me/TanjiroXKanaobot"> <img src="https://img.shields.io/badge/TanjiroXKanao-User-purple?style=for-the-badge&logo=telegram" alt=Yor_Forger on Telegram" /> </a>
 <a href= "https://t.me/+dGeoDP2ke3U4MWM1"> <img src="https://img.shields.io/badge/Support-Chat-green?style=for-the-badge&logo=telegram" alt="Support Chat" /> </a>
 <a href="https://t.me/SOME1_HING"> <img src="https://img.shields.io/badge/Update-Channel-green?style=for-the-badge&logo=telegram" alt="Update Channel" /> </a>
 </p>
